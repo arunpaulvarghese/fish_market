@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Fish Predictino</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Fish Prediction</h1>
+
+     <!-- Input for ML  -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Weight" placeholder="Fish Weight" required="required" />
+        <input type="text" name="Length1" placeholder="Fish Length 1" required="required" />
+		<input type="text" name="Length2" placeholder="Fish Length 2" required="required" />
+		<input type="text" name="Length3" placeholder="Fish Length 3" required="required" />
+    <input type="text" name="Height" placeholder="Fish Height" required="required" />
+    <input type="text" name="Width" placeholder="Fish Width" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
