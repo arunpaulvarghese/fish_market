@@ -2,10 +2,8 @@ from flask import Flask, request, render_template
 import pickle
 import numpy as np
 
-# Initialize the Flask application
 app = Flask(__name__)
 
-# Load the pre-trained model
 with open('classifier.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
